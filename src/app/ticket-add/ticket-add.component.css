@@ -1,0 +1,7 @@
+.container {
+  padding-top: 18%;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}

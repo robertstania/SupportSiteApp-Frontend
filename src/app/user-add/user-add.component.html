@@ -1,0 +1,38 @@
+<nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
+  <div class="navbar-header col-md-8">
+      <a class="nav navbar-nav navbar-brand" href="/users"><i class="fa fa-spinner fa-spin fa-1x" style="color: #00FFFF;"></i>Sirenet Admin Dashboard | User Profile Information</a>
+  </div>
+</nav>
+
+  <section class="home-section home-full-height" data-background="assets/images/background5.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-3">
+          <h4 class="font-alt titan-title-size-4">Create New<br>User Account</h4>
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input class="form-control" type = "text" name="name" placeholder="First & Last Name"
+                    required
+                    [(ngModel)]="user.name" name="userName">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type = "text" name="country"  placeholder="Country"
+                    required [(ngModel)]="user.country" name="userCountry">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type = "text" name="city" placeholder="City"
+                    required [(ngModel)]="user.city" name="userCity">
+            </div>
+            <div class="form-group">
+                <input class="form-control"  type="password" name="password" placeholder="Password"
+                    required [(ngModel)]="user.password" name="userPassword">
+            </div>
+            <div class="button-space"></div>
+            <div class="form-group">
+                <input class="btn btn-round btn-b" type="submit" value="Create">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

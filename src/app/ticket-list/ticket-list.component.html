@@ -1,0 +1,63 @@
+<nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
+  <div class="navbar-header col-md-8">
+      <a class="nav navbar-nav navbar-brand" href="/admin_dashboard"><i class="fa fa-spinner fa-spin fa-1x" style="color: #00FFFF;"></i>Sirenet Admin Dashboard | Ticket Queue</a>
+  </div>
+  <div class="collapse navbar-collapse" id="custom-collapse">
+    <ul class="nav navbar-nav navbar-right" routerLink="active">
+      <li><a class="navbar-brand">|</a><li>
+      <li><a class="navbar-brand" href="/tickets/add">Create New Ticket</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="home-section home-full-height" data-background="assets/images/background2.png">
+  <div id="padding-top" class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="header">
+                      <h4 class="title"></h4>
+                      <h4 class="title"></h4>
+                      <p class="category"></p>
+                  </div>
+                  <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                      <thead>
+                        <th>TICKET ID #</th>
+                        <th>TICKET NAME</th>
+                        <th>TICKET ISSUE</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let row of rows">
+                            <td>{{row.id}}</td>
+                            <td>{{row.name}}</td>
+                            <td>{{row.issue}}</td>
+                            <td><button class="btn btn-round btn-b" (click)="update(row['id'])">update</button></td>
+                            <td><button class="btn btn-round btn-b" (click)="delete(row['id'])">delete</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+<footer class="footer bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="copyright font-serif">&copy; 2019&nbsp;<a href="index.html">Sirenet Technology Solutions</a>, All Rights Reserved</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="footer-social-links"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a><a href="http://fontawesome.io/icon/dribbble/"><i class="fa fa-dribbble"></i></a><a href="https://www.skype.com/en/"><i class="fa fa-skype"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
